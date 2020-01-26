@@ -1,6 +1,7 @@
 import csv
 from datetime import date
 from openpyxl import Workbook
+from openpyxl.styles import Font, Alignment
 
 workbook = Workbook()
 sheet = workbook.active
@@ -94,16 +95,26 @@ def priv():
     print(f'{futuro} - Reunião Domingo - Indicadores: {indicadores2} Volantes: {volantes2} Som: {opsom2} Leitor: {leitor1}')
 
     futuro = date.fromordinal(737399 + 13)
+    center_aligned_text = Alignment(horizontal="center")
+    bold_font = Font(bold=True)
     sheet["A1"] = "Data"
+    sheet["A1"].alignment = center_aligned_text
+    sheet["A1"].font = bold_font
     sheet["A2"] = str(futuro)
 
     sheet["B1"] = "Indicadores:"
+    sheet["B1"].alignment = center_aligned_text
+    sheet["B1"].font = bold_font
     sheet["B2"] = str(indicadores)
 
     sheet["C1"] = "Volantes:"
+    sheet["C1"].alignment = center_aligned_text
+    sheet["C1"].font = bold_font
     sheet["C2"] = str(volantes)
 
     sheet["D1"] = "Som:"
+    sheet["D1"].alignment = center_aligned_text
+    sheet["D1"].font = bold_font
     sheet["D2"] = str(opsom)
 
     futuro = date.fromordinal(737399 + 16)
@@ -112,6 +123,8 @@ def priv():
     sheet["C3"] = str(volantes2)
     sheet["D3"] = str(opsom2)
     sheet["E1"] = "leitor:"
+    sheet["E1"].alignment = center_aligned_text
+    sheet["E1"].font = bold_font
     sheet["E3"] = str(leitor1)
 
     cont = 0
