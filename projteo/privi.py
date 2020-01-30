@@ -1,4 +1,3 @@
-import csv
 from datetime import date
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment
@@ -308,9 +307,9 @@ def priv():
             cont += 1
 
     print()
-    futuro = date.fromordinal(737399+13)
+    futuro = quinta1
     print(f'{futuro} - Reunião Quinta -- Indicadores: {indicadores} Volantes: {volantes} Som: {opsom}')
-    futuro = date.fromordinal(hj.toordinal()+16)
+    futuro = domingo1
     print(f'{futuro} - Reunião Domingo - Indicadores: {indicadores2} Volantes: {volantes2} Som: {opsom2} Leitor: {leitor1}')
 
     center_aligned_text = Alignment(horizontal="center")
@@ -364,14 +363,15 @@ def priv():
 
     cont = 0
     for ind4 in voluntarios:
-        if ind4 not in opsom4 and ind4 not in leitor2 and ind4 not in indicadores4 and ind4 not in volantes3 and cont <= 1:
+        if ind4 not in opsom4 and ind4 not in leitor2 and ind4 not in indicadores4 and ind4 not in \
+                volantes3 and cont <= 1:
             volantes4.append(ind4)
             cont += 1
 
     print()
-    futuro = date.fromordinal(737399+20)
+    futuro = quinta2
     print(f'{futuro} - Reunião Quinta -- Indicadores: {indicadores3} Volantes: {volantes3} Som: {opsom3}')
-    futuro = date.fromordinal(737399+23)
+    futuro = domingo2
     print(f'{futuro} - Reunião Domingo - Indicadores: {indicadores4} Volantes: {volantes4} Som: {opsom4} Leitor: {leitor2}')
 
     sheet["A4"] = str(quinta2)
@@ -410,9 +410,9 @@ def priv():
             cont += 1
 
     print()
-    futuro = date.fromordinal(737399+27)
+    futuro = quinta3
     print(f'{futuro} - Reunião Quinta -- Indicadores: {indicadores5} Volantes: {volantes5} Som: {opsom5}')
-    futuro = date.fromordinal(737399+30)
+    futuro = domingo3
     print(f'{futuro} - Reunião Domingo - Indicadores: {indicadores6} Volantes: {volantes6} Som: {opsom6} Leitor: {leitor3}')
 
     sheet["A6"] = str(quinta3)
@@ -449,11 +449,10 @@ def priv():
             volantes8.append(ind8)
             cont += 1
 
-
     print()
-    futuro = date.fromordinal(737399+34)
+    futuro = quinta4
     print(f'{futuro} - Reunião Quinta -- Indicadores: {indicadores7} Volantes: {volantes7} Som: {opsom7}')
-    futuro = date.fromordinal(737399+37)
+    futuro = domingo4
     print(f'{futuro} - Reunião Domingo - Indicadores: {indicadores8} Volantes: {volantes8} Som: {opsom8} Leitor: {leitor4}')
 
     sheet["A8"] = str(quinta4)
@@ -466,7 +465,6 @@ def priv():
     sheet["C9"] = str(volantes8)
     sheet["D9"] = str(opsom8)
     sheet["E9"] = str(leitor4)
-
 
     cont = 0
     for ind9 in voluntarios:
@@ -492,25 +490,20 @@ def priv():
             volantes10.append(ind10)
             cont += 1
 
-
     print()
-    print()
-    futuro = date.fromordinal(737399 + 41)
+    futuro = quinta5
     print(f'{futuro} - Reunião Quinta -- Indicadores: {indicadores9} Volantes: {volantes9} Som: {opsom9}')
-    futuro = date.fromordinal(737399 + 44)
+    futuro = domingo5
     print(
         f'{futuro} - Reunião Domingo - Indicadores: {indicadores10} Volantes: {volantes10} '
         f'Som: {opsom10} Leitor: {leitor6}'
     )
-
-    futuro = date.fromordinal(737399 + 41)
 
     sheet["A10"] = str(quinta5)
     sheet["B10"] = str(indicadores9)
     sheet["C10"] = str(volantes9)
     sheet["D10"] = str(opsom9)
 
-    futuro = date.fromordinal(737399 + 44)
     sheet["A11"] = str(domingo5)
     sheet["B11"] = str(indicadores10)
     sheet["C11"] = str(volantes10)
@@ -545,25 +538,22 @@ def priv():
 
     print()
     print()
-    futuro = date.fromordinal(737399 + 47)
+    futuro = quinta6
     print(
         f'{futuro} - Reunião Quinta -- Indicadores: {indicadores11} '
         f'Volantes: {volantes11} Som: {opsom11}'
     )
-    futuro = date.fromordinal(737399 + 51)
+    futuro = domingo6
     print(
         f'{futuro} - Reunião Domingo - Indicadores: {indicadores12}'
         f' Volantes: {volantes12} Som: {opsom12} Leitor: {leitor9}'
     )
-
-    futuro = date.fromordinal(737399 + 47)
 
     sheet["A12"] = str(quinta6)
     sheet["B12"] = str(indicadores11)
     sheet["C12"] = str(volantes11)
     sheet["D12"] = str(opsom11)
 
-    futuro = date.fromordinal(737399 + 51)
     sheet["A13"] = str(domingo6)
     sheet["B13"] = str(indicadores12)
     sheet["C13"] = str(volantes12)
@@ -571,5 +561,6 @@ def priv():
     sheet["E13"] = str(leitor9)
 
     workbook.save(filename="pkla.xlsx")
+
 
 priv()
