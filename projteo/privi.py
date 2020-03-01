@@ -9,70 +9,82 @@ sheet = workbook.active
 hj = (date.today())
 futuro = date.fromordinal(737399+13)
 
-voluntarios = ['Alexandre', 'Leonardo', 'Eduardo', 'João', 'Natanael', 'Renato', 'Ronaldo', 'Ferreira', 'Claudio']
-som = ['Natanael', 'Eduardo', 'Leonardo', 'Alexandre']
+voluntarios = ['José Ferreira', 'Leonardo Verzi', 'Eduardo Ferraz', 'João Melo', 'Natanael Silva', 'Leonardo Santos',
+               'Renato Verzi', 'Ronaldo Flores', 'Alexandre Monticelli', 'Claudio Goveia', 'Alexandre Leonel']
+
+som = ['Natanael Silva', 'Eduardo Ferraz', 'Leonardo Verzi', 'Alexandre Leonel']
 
 indicadores = []
 volantes = []
-opsom = ['Leonardo']
+opsom = ['Leonardo Verzi']
 
 indicadores2 = []
 volantes2 = []
-opsom2 = ['Natanael']
-d = leitor1 = ['Eduardo']
+opsom2 = ['Natanael Silva']
+leitor1 = ['Eduardo Ferraz']
 
 indicadores3 = []
 volantes3 = []
-opsom3 = ['Alexandre']
+opsom3 = ['Alexandre Leonel']
 
 indicadores4 = []
 volantes4 = []
-opsom4 = ['Eduardo']
-leitor2 = ['Alexandre']
+opsom4 = ['Eduardo Ferraz']
+leitor2 = ['Alexandre Monticelli']
 
 indicadores5 = []
 volantes5 = []
-opsom5 = ['Leonardo']
-leitor3 = ['Ronaldo']
+opsom5 = ['Leonardo Verzi']
+leitor3 = ['Ronaldo Flores']
 
 indicadores6 = []
 volantes6 = []
-opsom6 = ['Natanael']
+opsom6 = ['Natanael Silva']
 
 indicadores7 = []
 volantes7 = []
-opsom7 = ['Alexandre']
-leitor4 = ['Renato']
+opsom7 = ['Alexandre Leonel']
+leitor4 = ['Renato Verzi']
 
 indicadores8 = []
 volantes8 = []
-opsom8 = ['Eduardo']
+opsom8 = ['Eduardo Ferraz']
 
 indicadores9 = []
 volantes9 = []
-opsom9 = ['Leonardo']
-leitor6 = ['Nelson']
+opsom9 = ['Leonardo Verzi']
+leitor6 = ['Nelson Custódio']
 
 indicadores10 = []
 volantes10 = []
-opsom10 = ['Natanael']
-leitor8 = ['Alexandre']
+opsom10 = ['Natanael Silva']
+leitor8 = ['Alexandre Leonel']
 
 indicadores11 = []
 volantes11 = []
-opsom11 = ['Eduardo']
-leitor9 = ['Leonardo']
+opsom11 = ['Alexandre Leonel']
+leitor9 = ['Leonardo Verzi']
 
 indicadores12 = []
 volantes12 = []
-opsom12 = ['Alexandre']
-leitor10 = ['Eduardo']
+opsom12 = ['Eduardo Ferraz']
+leitor10 = ['Ronaldo ']
+
+indicadores13 = []
+volantes13 = []
+opsom13 = ['Leonardo Verzi']
+leitor11 = ['Nelson Custódio']
+
+indicadores14 = []
+volantes14 = []
+opsom14 = ['Natanael Silva']
+leitor12 = ['Renato Verzi']
 
 
 def priv():
     dias = ('Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo')
 
-    if hj.weekday() == 0:
+    if hj.weekday() == 0: # segunda-feira #
         quinta1 = date.fromordinal(hj.toordinal() + 3)
         ordinario_number = quinta1.toordinal()
         domingo1 = date.fromordinal(ordinario_number + 3)
@@ -99,10 +111,28 @@ def priv():
         ordinario_number = quinta6.toordinal()
         domingo6 = date.fromordinal(ordinario_number + 3)
 
+        ordinario_number = domingo6.toordinal()
+        quinta7 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta6.toordinal()
+        domingo7 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo7.toordinal()
+        quinta8 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta8.toordinal()
+        domingo8 = date.fromordinal(ordinario_number + 3)
+
+        ordinario_number = domingo8.toordinal()
+        quinta9 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta9.toordinal()
+        domingo9 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo9.toordinal()
+        quinta10 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta10.toordinal()
+        domingo10 = date.fromordinal(ordinario_number + 3)
+
         print("Hoje é", dias[hj.weekday()])
         print(f'\nA data será gerada para a próxima Quinta-Feira dia: {quinta1}')
 
-    elif hj.weekday() == 1:
+    elif hj.weekday() == 1: # terça-feira #
         quinta1 = date.fromordinal(hj.toordinal() + 2)
         ordinario_number = quinta1.toordinal()
         domingo1 = date.fromordinal(ordinario_number + 3)
@@ -129,22 +159,28 @@ def priv():
         ordinario_number = quinta6.toordinal()
         domingo6 = date.fromordinal(ordinario_number + 3)
 
+        ordinario_number = domingo6.toordinal()
+        quinta7 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta6.toordinal()
+        domingo7 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo7.toordinal()
+        quinta8 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta8.toordinal()
+        domingo8 = date.fromordinal(ordinario_number + 3)
+
+        ordinario_number = domingo8.toordinal()
+        quinta9 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta9.toordinal()
+        domingo9 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo9.toordinal()
+        quinta10 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta10.toordinal()
+        domingo10 = date.fromordinal(ordinario_number + 3)
+
         print("Hoje é", dias[hj.weekday()])
         print(f'\nA data será gerada para a próxima Quinta-Feira dia: {quinta1}')
-        print(quinta1)
-        print(domingo1)
-        print(quinta2)
-        print(domingo2)
-        print(quinta3)
-        print(domingo3)
-        print(quinta4)
-        print(domingo4)
-        print(quinta5)
-        print(domingo5)
-        print(quinta6)
-        print(domingo6)
 
-    elif hj.weekday() == 2:
+    elif hj.weekday() == 2: # quarta-feira #
         quinta1 = date.fromordinal(hj.toordinal() + 1)
         ordinario_number = quinta1.toordinal()
         domingo1 = date.fromordinal(ordinario_number + 3)
@@ -171,14 +207,38 @@ def priv():
         ordinario_number = quinta6.toordinal()
         domingo6 = date.fromordinal(ordinario_number + 3)
 
+        ordinario_number = domingo6.toordinal()
+        quinta7 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta7.toordinal()
+        domingo7 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo7.toordinal()
+        quinta8 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta8.toordinal()
+        domingo8 = date.fromordinal(ordinario_number + 3)
+
+        ordinario_number = domingo8.toordinal()
+        quinta9 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta9.toordinal()
+        domingo9 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo9.toordinal()
+        quinta10 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta10.toordinal()
+        domingo10 = date.fromordinal(ordinario_number + 3)
+
         print("Hoje é", dias[hj.weekday()])
         print(f'\nA data será gerada para a próxima Quinta-Feira dia: {quinta1}')
 
-    elif hj.weekday() == 3:
-        domingo1 = date.fromordinal(hj.toordinal() + 3)
+    elif hj.weekday() == 3: # quinta-feira #
+
+        quinta1 = date.fromordinal(hj.toordinal())
+        ordinario_number = quinta1.toordinal()
+
+        domingo1 = date.fromordinal(ordinario_number + 3)
         ordinario_number = domingo1.toordinal()
+
         quinta2 = date.fromordinal(ordinario_number + 4)
         ordinario_number = quinta2.toordinal()
+
         domingo2 = date.fromordinal(ordinario_number + 3)
 
         ordinario_number = domingo2.toordinal()
@@ -199,10 +259,28 @@ def priv():
         ordinario_number = quinta6.toordinal()
         domingo6 = date.fromordinal(ordinario_number + 3)
 
+        ordinario_number = domingo6.toordinal()
+        quinta7 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta6.toordinal()
+        domingo7 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo7.toordinal()
+        quinta8 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta8.toordinal()
+        domingo8 = date.fromordinal(ordinario_number + 3)
+
+        ordinario_number = domingo8.toordinal()
+        quinta9 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta9.toordinal()
+        domingo9 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo9.toordinal()
+        quinta10 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta10.toordinal()
+        domingo10 = date.fromordinal(ordinario_number + 3)
+
         print("Hoje é", dias[hj.weekday()])
         print(f'\nA data será gerada para o próximo Domingo dia: {domingo1}')
 
-    elif hj.weekday() == 4:
+    elif hj.weekday() == 4: # sexta-feita #
         domingo1 = date.fromordinal(hj.toordinal() + 2)
         ordinario_number = domingo1.toordinal()
         quinta2 = date.fromordinal(ordinario_number + 4)
@@ -227,10 +305,28 @@ def priv():
         ordinario_number = quinta6.toordinal()
         domingo6 = date.fromordinal(ordinario_number + 3)
 
+        ordinario_number = domingo6.toordinal()
+        quinta7 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta6.toordinal()
+        domingo7 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo7.toordinal()
+        quinta8 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta8.toordinal()
+        domingo8 = date.fromordinal(ordinario_number + 3)
+
+        ordinario_number = domingo8.toordinal()
+        quinta9 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta9.toordinal()
+        domingo9 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo9.toordinal()
+        quinta10 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta10.toordinal()
+        domingo10 = date.fromordinal(ordinario_number + 3)
+
         print("Hoje é", dias[hj.weekday()])
         print(f'\nA data será gerada para o próximo Domingo dia: {domingo1}')
 
-    elif hj.weekday() == 5:
+    elif hj.weekday() == 5: # sábado #
         domingo1 = date.fromordinal(hj.toordinal() + 1)
         ordinario_number = domingo1.toordinal()
         quinta2 = date.fromordinal(ordinario_number + 4)
@@ -255,12 +351,31 @@ def priv():
         ordinario_number = quinta6.toordinal()
         domingo6 = date.fromordinal(ordinario_number + 3)
 
+        ordinario_number = domingo6.toordinal()
+        quinta7 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta6.toordinal()
+        domingo7 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo7.toordinal()
+        quinta8 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta8.toordinal()
+        domingo8 = date.fromordinal(ordinario_number + 3)
+
+        ordinario_number = domingo8.toordinal()
+        quinta9 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta9.toordinal()
+        domingo9 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo9.toordinal()
+        quinta10 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta10.toordinal()
+        domingo10 = date.fromordinal(ordinario_number + 3)
+
         print("Hoje é", dias[hj.weekday()])
         print(f'A data será gerada para o próximo Domingo dia: {domingo1}')
-    elif hj.weekday() == 6:
-        quinta1 = date.fromordinal(hj.toordinal() + 4)
-        ordinario_number = quinta1.toordinal()
-        domingo2 = date.fromordinal(ordinario_number + 3)
+
+    elif hj.weekday() == 6: # domingo #
+        # quinta1 = date.fromordinal(hj.toordinal() + 4)
+        # ordinario_number = quinta1.toordinal()
+        domingo2 = date.fromordinal(hj.toordinal())
         ordinario_number = domingo2.toordinal()
         quinta2 = date.fromordinal(ordinario_number + 4)
         ordinario_number = quinta2.toordinal()
@@ -279,8 +394,26 @@ def priv():
         ordinario_number = quinta6.toordinal()
         domingo6 = date.fromordinal(ordinario_number + 3)
 
+        ordinario_number = domingo6.toordinal()
+        quinta7 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta7.toordinal()
+        domingo7 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo7.toordinal()
+        quinta8 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta8.toordinal()
+        domingo8 = date.fromordinal(ordinario_number + 3)
+
+        ordinario_number = domingo8.toordinal()
+        quinta9 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta9.toordinal()
+        domingo9 = date.fromordinal(ordinario_number + 3)
+        ordinario_number = domingo9.toordinal()
+        quinta10 = date.fromordinal(ordinario_number + 4)
+        ordinario_number = quinta10.toordinal()
+        domingo10 = date.fromordinal(ordinario_number + 3)
+
         print("Hoje é", dias[hj.weekday()])
-        print(f'\nA data será gerada para a próxima Quinta-Feira dia: {quinta1}')
+        print(f'\nA data será gerada para a próxima Quinta-Feira dia: {quinta2}')
 
     cont = 0
     for ind1 in voluntarios:
@@ -302,22 +435,22 @@ def priv():
 
     cont = 0
     for ind2 in voluntarios:
-        if ind2 not in opsom2 and ind2 not in leitor1 and ind2 not in indicadores2 and ind2 not in volantes and cont <= 1:
+        if ind2 not in opsom2 and ind2 not in leitor1 and ind2 not in indicadores2 and ind2 not in indicadores and ind2 not in volantes and cont <= 1:
             volantes2.append(ind2)
             cont += 1
 
     print()
-    futuro = quinta1
+    futuro = quinta2
     print(f'{futuro} - Reunião Quinta -- Indicadores: {indicadores} Volantes: {volantes} Som: {opsom}')
-    futuro = domingo1
+    futuro = domingo2
     print(f'{futuro} - Reunião Domingo - Indicadores: {indicadores2} Volantes: {volantes2} Som: {opsom2} Leitor: {leitor1}')
 
     center_aligned_text = Alignment(horizontal="center")
     bold_font = Font(bold=True)
-    sheet["A1"] = "Data"
+    sheet["A1"] = str(quinta2)
     sheet["A1"].alignment = center_aligned_text
     sheet["A1"].font = bold_font
-    sheet["A2"] = str(quinta1)
+    sheet["A2"] = str(quinta2)
 
     sheet["B1"] = "Indicadores:"
     sheet["B1"].alignment = center_aligned_text
@@ -345,7 +478,7 @@ def priv():
 
     cont = 0
     for ind3 in voluntarios:
-        if ind3 not in opsom3 and ind3 not in indicadores2 and ind3 and ind3 not in volantes3 and cont <= 1:
+        if ind3 not in opsom3 and ind3 not in indicadores2 and ind3 not in indicadores and ind3 and ind3 not in volantes3 and cont <= 1:
             indicadores3.append(ind3)
             cont += 1
 
@@ -399,7 +532,7 @@ def priv():
 
     cont = 0
     for ind6 in voluntarios:
-        if ind6 not in opsom6 and ind6 not in indicadores5 and ind6 not in leitor3 and cont <= 1:
+        if ind6 not in opsom6 and ind6 not in indicadores5 and ind6 not in indicadores4 and ind6 not in leitor3 and cont <= 1:
             indicadores6.append(ind6)
             cont += 1
 
@@ -428,7 +561,7 @@ def priv():
 
     cont = 0
     for ind7 in voluntarios:
-        if ind7 not in opsom7 and ind7 not in indicadores6 and ind7 not in indicadores5 and cont <= 1:
+        if ind7 not in opsom7 and ind7 not in indicadores6 and ind7 not in indicadores5 and ind7 not in indicadores4 and cont <= 1:
             indicadores7.append(ind7)
             cont += 1
     cont = 0
@@ -560,7 +693,59 @@ def priv():
     sheet["D13"] = str(opsom12)
     sheet["E13"] = str(leitor9)
 
-    workbook.save(filename="pkla.xlsx")
+    cont = 0
+    for ind12 in voluntarios:
+        if ind12 not in opsom12 and ind12 not in indicadores11 and ind12 not in indicadores12 and ind12\
+                not in indicadores13 and cont <= 1:
+            indicadores13.append(ind12)
+            cont += 1
 
+    cont = 0
+    for ind12 in voluntarios:
+        if ind12 not in opsom12 and ind12 not in indicadores11 and ind12 not in indicadores12\
+                and ind12 not in volantes13 and ind12 not in volantes14 and ind12 not in indicadores13 and cont <= 1:
+            volantes13.append(ind12)
+            cont += 1
+
+    cont = 0
+    for ind12 in voluntarios:
+        if ind12 not in opsom12 and ind12 not in indicadores12 and ind12 not in indicadores11 \
+                and ind12 not in volantes13 and ind12 not in indicadores13 and cont <= 1:
+            indicadores14.append(ind12)
+            cont += 1
+
+    cont = 0
+    for ind12 in voluntarios:
+        if ind12 not in opsom12 and ind12 not in indicadores11 and ind12 not in indicadores12 \
+                and ind12 not in volantes13 and ind12 not in volantes14 and ind12 not in indicadores13 and cont <= 1:
+            volantes14.append(ind12)
+            cont += 1
+
+    print()
+    print()
+
+    futuro = quinta7
+    print(
+        f'{futuro} - Reunião Quinta -- Indicadores: {indicadores13} '
+        f'Volantes: {volantes13} Som: {opsom13}'
+    )
+    futuro = domingo7
+    print(
+        f'{futuro} - Reunião Domingo - Indicadores: {indicadores14}'
+        f' Volantes: {volantes14} Som: {opsom14} Leitor: {leitor10}'
+    )
+
+    sheet["A14"] = str(quinta7)
+    sheet["B14"] = str(indicadores13)
+    sheet["C14"] = str(volantes13)
+    sheet["D14"] = str(opsom13)
+
+    sheet["A15"] = str(domingo7)
+    sheet["B15"] = str(indicadores14)
+    sheet["C15"] = str(volantes14)
+    sheet["D15"] = str(opsom14)
+    sheet["E15"] = str(leitor10)
+
+    workbook.save(filename="pkla.xlsx")
 
 priv()
