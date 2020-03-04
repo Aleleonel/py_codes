@@ -42,6 +42,27 @@ som_quinta3 = []
 som_domingo3 = []
 leitor3 = []
 
+voluntarios_Domingo4 = []
+voluntarios_Quinta4 = []
+indicadores_quinta4 = []
+indicadores_domingo4 = []
+volantes_quinta4 = []
+volantes_domingo4 = []
+som_quinta4 = []
+som_domingo4 = []
+leitor4 = []
+
+voluntarios_Domingo5 = []
+voluntarios_Quinta5 = []
+indicadores_quinta5 = []
+indicadores_domingo5 = []
+volantes_quinta5 = []
+volantes_domingo5 = []
+som_quinta5 = []
+som_domingo5 = []
+leitor5 = []
+
+
 voluntarios_Quinta_segunda_semana = []
 
 
@@ -330,3 +351,161 @@ print()
 print(f'Indicadores Quinta- feira: {indicadores_quinta3}')
 print(f'Volantes Quinta- feira: {volantes_quinta3}')
 print(f'Operadores de som Quinta- feira: {som_quinta3}')
+
+
+###
+# checa quem ja participou como voluntária na reunião de quinta terceira semana
+for v in range(len(voluntarios)):
+    if voluntarios[v] not in indicadores_quinta3 and voluntarios[v] not in volantes_quinta3 \
+            and voluntarios[v] not in som_quinta3 and voluntarios[v] not in leitores:
+        voluntarios_Domingo3.append(voluntarios[v])
+
+for l in range(len(leitores)):
+    if leitores[l] not in indicadores_quinta3 and leitores[l] not in volantes_quinta3 \
+            and leitores[l] not in som_quinta3 and leitores[l] not in leitor:
+        voluntarios_Domingo3.append(leitores[l])
+
+for s in range(len(som)):
+    if som[s] not in indicadores_quinta3 and som[s] not in volantes_quinta3 \
+            and som[s] not in som_quinta3 and som[s] not in leitor:
+        voluntarios_Domingo3.append(som[s])
+print()
+print(voluntarios_Domingo3)
+
+# voluntarios do domingo terceira semana
+cont = 0
+for v in range(len(voluntarios_Domingo3)):
+    # indicadores de Domingo
+    if voluntarios_Domingo3[v] not in indicadores_domingo3 and voluntarios_Domingo3[v] not in volantes_domingo3 \
+            and voluntarios_Domingo3[v] not in som_domingo3 and voluntarios_Domingo3[v] not in leitor and cont <= 1:
+        indicadores_domingo3.append(voluntarios_Domingo3[v])
+        cont += 1
+
+cont = 0
+for v in range(len(voluntarios_Domingo3)):
+    # volantes de  Domingo
+    if voluntarios_Domingo3[v] not in indicadores_domingo3 and voluntarios_Domingo3[v] not in volantes_domingo3 \
+            and voluntarios_Domingo3[v] not in som_domingo3 and voluntarios_Domingo3[v] not in leitor and cont <= 1:
+        volantes_domingo3.append(voluntarios_Domingo3[v])
+        cont += 1
+
+# verifica se tem apenas um volante e acrescenta + 1
+for v in range(len(voluntarios_Domingo3)):
+
+    if len(volantes_domingo3) < 2:
+        cont = 0
+        for ind in range(len(indicadores_quinta3)):
+            if indicadores_quinta3[ind] not in volantes_domingo3:
+                volantes_domingo3.append(indicadores_quinta)
+        cont += 1
+
+cont = 0
+for s in range(len(som)):
+    # Operadores do Som - Domingo
+    if som[s] not in indicadores_domingo3 and som[s] not in volantes_domingo3 and som[s] not in som_domingo2 \
+            and som[s] not in som_domingo3 \
+            and som[s] not in som_quinta and cont < 1:
+        som_domingo3.append(som[s])
+        cont += 1
+
+cont = 0
+for l in range(len(leitores)):
+    # Leitor - Domingo
+    if leitores[l] not in indicadores_domingo3 and leitores[l] not in volantes_domingo3 \
+            and leitores[l] not in leitor2 \
+            and leitores[l] not in som_domingo3 and cont < 1:
+        leitor3.append(leitores[l])
+        cont += 1
+
+print()
+print(f'Indicadores Domingo: {indicadores_domingo3}')
+print(f'Volantes Domingo: {volantes_domingo3}')
+print(f'Operadores de som Domingo: {som_domingo3}')
+print(f'Leitor de A Sentinela: {leitor3}')
+
+
+# checa quem ja participou como voluntária na reunião de Domingo terceira semana
+for v in range(len(voluntarios)):
+    if voluntarios[v] and voluntarios[v] not in indicadores_domingo3 \
+            and voluntarios[v] not in volantes_domingo3 \
+            and voluntarios[v] not in som_domingo3 \
+            and voluntarios[v] not in leitor3 and voluntarios[v] \
+            not in voluntarios_Quinta4:
+        voluntarios_Quinta4.append(voluntarios[v])
+
+for l in range(len(leitores)):
+    if leitores[l] and leitores[l] not in indicadores_domingo3\
+            and leitores[l] not in volantes_domingo3 \
+            and leitores[l] not in som_domingo3 \
+            and leitores[l] not in leitor3 and voluntarios[v] \
+            not in voluntarios_Quinta3:
+        voluntarios_Quinta4.append(leitores[l])
+
+for s in range(len(som)):
+    if som[s] not in indicadores_domingo3 and som[s] not in volantes_domingo3 \
+            and som[s] not in som_domingo3 and som[s] not in leitor3 and voluntarios[v] not in voluntarios_Quinta3:
+        voluntarios_Quinta4.append(som[s])
+print()
+print(voluntarios_Quinta4)
+
+# voluntarios da quinta segunda semana
+cont = 0
+for v in range(len(voluntarios_Quinta4)):
+    # indicadores de Quinta-Feira segunda semana
+    if voluntarios_Quinta4[v] not in indicadores_quinta2 \
+            and voluntarios_Quinta4[v] not in indicadores_quinta3 \
+            and voluntarios_Quinta4[v] not in indicadores_quinta4 \
+            and voluntarios_Quinta4[v] not in volantes_quinta4 \
+            and voluntarios_Quinta3[v] not in som_quinta4 \
+            and cont <= 1:
+        indicadores_quinta4.append(voluntarios_Quinta4[v])
+        cont += 1
+
+cont = 0
+for v in range(len(voluntarios_Quinta4)):
+    # volantes de  Quinta-Feira segunda semana
+    if voluntarios_Quinta4[v] not in indicadores_quinta4 \
+            and voluntarios_Quinta4[v] not in volantes_quinta4 \
+            and voluntarios_Quinta4[v] not in som_quinta4 and cont <= 1:
+        volantes_quinta4.append(voluntarios_Quinta4[v])
+        cont += 1
+
+cont = 0
+for s in range(len(som)):
+    # Operadores do Som - Quinta-Feira terceira semana
+    if som[s] not in indicadores_quinta4 \
+            and som[s] not in volantes_quinta4 \
+            and som[s] not in som_quinta2 \
+            and som[s] not in som_domingo2 \
+            and som[s] not in som_quinta3 \
+            and som[s] not in som_domingo3 \
+            and som[s] not in som_quinta4 \
+            and cont < 1:
+        som_quinta4.append(som[s])
+        cont += 1
+
+# imprime todos os voluntários da reunião de quinta quarta semana
+print()
+print(f'Indicadores Quinta- feira: {indicadores_quinta4}')
+print(f'Volantes Quinta- feira: {volantes_quinta4}')
+print(f'Operadores de som Quinta- feira: {som_quinta4}')
+
+
+###
+# checa quem ja participou como voluntária na reunião de quinta terceira semana
+for v in range(len(voluntarios)):
+    if voluntarios[v] not in indicadores_quinta4 and voluntarios[v] not in volantes_quinta4 \
+            and voluntarios[v] not in som_quinta4 and voluntarios[v] not in leitores:
+        voluntarios_Domingo4.append(voluntarios[v])
+
+for l in range(len(leitores)):
+    if leitores[l] not in indicadores_quinta4 and leitores[l] not in volantes_quinta4 \
+            and leitores[l] not in som_quinta4 and leitores[l] not in leitor3:
+        voluntarios_Domingo4.append(leitores[l])
+
+for s in range(len(som)):
+    if som[s] not in indicadores_quinta4 and som[s] not in volantes_quinta4 \
+            and som[s] not in som_quinta4 and som[s] not in leitor3:
+        voluntarios_Domingo4.append(som[s])
+print()
+print(voluntarios_Domingo5)
