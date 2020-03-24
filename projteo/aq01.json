@@ -1,0 +1,118 @@
+{
+    "Primeira_Quinta":{
+        "Indicadores":[
+            "José Ferreira",
+            "Leonardo Verzi"
+        ],
+        "Operador de Som":[
+            "Natanael Silva"
+        ],
+        "Volantes":[
+            "Eduardo Ferraz",
+            "João Melo"
+        ]
+    },
+    "Primeiro_Domingo":{
+        "Indicadores":[
+            "Leonardo Santos",
+            "Claudio Goveia"
+        ],
+        "Leitor":[
+            "Leonardo Verzi"
+        ],
+        "Operador de Som":[
+            "Eduardo Ferraz"
+        ],
+        "Volantes":[
+            "Alexandre Leonel",
+            "Renato Verzi"
+        ]
+    },
+    "Quarta_Quinta":{
+        "Indicadores":[
+            "José Ferreira",
+            "Nelson Custódio"
+        ],
+        "Operador de Som":[
+            "Natanael Silva"
+        ],
+        "Volantes":[
+            "João Melo",
+            "Renato Verzi"
+        ]
+    },
+    "Quarto_Domingo":{
+        "Indicadores":[
+            "Leonardo Santos",
+            "Claudio Goveia"
+        ],
+        "Leitor":[
+            "Leonardo Verzi"
+        ],
+        "Operador de Som":[
+            "Natanael Silva"
+        ],
+        "Volantes":[
+            "Ronaldo Flores",
+            "Eduardo Ferraz"
+        ]
+    },
+    "Segunda_Quinta":{
+        "Indicadores":[
+            "Ronaldo Flores",
+            "Alexandre Monticelli"
+        ],
+        "Operador de Som":[
+            "Leonardo Verzi"
+        ],
+        "Volantes":[
+            "José Ferreira",
+            "João Melo"
+        ]
+    },
+    "Segundo_Domingo":{
+        "Indicadores":[
+            "Natanael Silva",
+            "Leonardo Santos"
+        ],
+        "Leitor":[
+            "Leonardo Verzi"
+        ],
+        "Operador de Som":[
+            "Eduardo Ferraz"
+        ],
+        "Volantes":[
+            "Claudio Goveia",
+            "Alexandre Leonel"
+        ]
+    },
+    "Terceira_Quinta":{
+        "Indicadores":[
+            "João Melo",
+            "Renato Verzi"
+        ],
+        "Operador de Som":[
+            "Alexandre Leonel"
+        ],
+        "Volantes":[
+            "José Ferreira",
+            "Ronaldo Flores"
+        ]
+    },
+    "Terceiro_Domingo":{
+        "Indicadores":[
+            "Natanael Silva",
+            "Leonardo Santos"
+        ],
+        "Leitor":[
+            "Alexandre Leonel"
+        ],
+        "Operador de Som":[
+            "Leonardo Verzi"
+        ],
+        "Volantes":[
+            "Claudio Goveia",
+            "Eduardo Ferraz"
+        ]
+    }
+}
