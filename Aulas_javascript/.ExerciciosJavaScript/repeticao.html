@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcula a Media</title>
+</head>
+<body>
+    <div id="res"></div>
+    <input type="button" value="verificar" onclick="calcula()">
+
+
+    <script>
+        function calcula(){
+            var dados = new Array();
+            var media = 0
+            var mediaGeral = 0
+            var res = window.document.getElementById('res')
+
+            dados[0] = ["aluno1", 7, 8, 7, 8];
+            dados[1] = ["aluno2", 9, 9, 7, 7];
+            dados[2] = ["aluno3", 8, 8, 9, 10];
+            dados[3] = ["aluno4", 9, 9, 10, 6];
+
+            for(var i = 0; i < dados.length; i++){
+                var mediaAluno = (dados[i][1] + dados[i][2] + dados[i][3] / dados[i].length -1);
+
+                media += mediaAluno;
+
+                document.write(dados[i][0]+ " /Média "+ mediaAluno.toFixed(2)+ "<br/>");                
+            }          
+            mediaGeral = media/dados.length;
+            res.innerHTML = window.document.write("Média Geral:"+ mediaGeral.toFixed(2));
+        }
+
+    </script>
+    
+</body>
+</html>

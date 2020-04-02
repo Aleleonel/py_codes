@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio01</title>
+</head>
+<body>
+    Digite o seu país de Origem <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verifica" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var txtp = window.document.getElementById('txtpais')
+            var resposta = (txtp.value)
+            var res = window.document.getElementById('res')
+            res.innerHTML = `Seu país de Origem é o ${resposta}\n`
+
+            if (resposta == 'Brasil'){
+                res.innerHTML += `Portanto você é Brasileiro`
+            }
+            if (resposta == 'Argentina'){
+                res.innerHTML += `Portanto você é Argentino`
+            }
+        }
+    </script>
+</body>
+</html>
