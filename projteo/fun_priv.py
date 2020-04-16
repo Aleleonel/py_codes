@@ -843,7 +843,7 @@ def imprime():
 def main():
     print("Olá\n")
     cont = 0
-    x = int(input("Digite 1 para começar a preencher o nome dos estudantes :\n"))
+    x = int(input("Digite 1 para começar:\n"))
     if x == 1:
         gera_leitor()
         gera_opersom()
