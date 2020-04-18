@@ -85,25 +85,24 @@ leitor5 = []
 voluntarios_Quinta_segunda_semana = []
 
 from kivy.app import App
-from kivy.uix.button import Button
-from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
+from kivy.uix.scrollview import ScrollView
 import json
 
-class Voluntarios(App):
-    title = 'Voluntários'
 
+class Gerar(ScrollView):
+    def __init__(self, voluntarios, **kwargs):
+        super(Gerar, self).__init__(**kwargs)
+        for voluntario in voluntarios:
+            self.ids.box.add_widget(Label(text=voluntario, font_size=30, size_hint_y=None, height=200))
+
+
+class Privilegio(App):
     def build(self):
-        box = BoxLayout(orientation='vertical')
-        self.label = Label(text='Privilégios Mecânicos ', font_size=30)
-        button = Button(text='Gerar Lista', font_size=30, on_release=self.gerar)
-        button2 = Button(text='Limpar', font_size=30, on_release=self.limpar)
-        button3 = Button(text='Gerar Arquivo', font_size=30, on_release=self.gerar_json)
-        box.add_widget(self.label)
-        box.add_widget(button)
-        box.add_widget(button3)
-        box.add_widget(button2)
-        return box
+        return Gerar(['Indicadpres', 'Volantes', 'Operadores de Som', 'Leitores',
+                      'Indicadpres', 'Volantes', 'Operadores de Som', 'Indicadpres',
+                      'Volantes', 'Operadores de Som', 'Leitores'])
+
 
     def gerar_json(self, button3):
 
@@ -733,4 +732,4 @@ class Voluntarios(App):
 
 
 
-Voluntarios().run()
+Privilegio().run()

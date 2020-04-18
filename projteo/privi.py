@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment
 
@@ -7,13 +7,21 @@ workbook = Workbook()
 sheet = workbook.active
 
 hj = (date.today())
+# date_now = datetime.now()
+# if hj == date_now:
+#     hj = date_now - datetime.timedelta(days=1)
 futuro = date.fromordinal(737399+13)
+print(hj)
 
+# listas contendo os nomes e dos voluntarios
 voluntarios = ['José Ferreira', 'Leonardo Verzi', 'Eduardo Ferraz', 'João Melo', 'Natanael Silva', 'Leonardo Santos',
                'Renato Verzi', 'Ronaldo Flores', 'Alexandre Monticelli', 'Claudio Goveia', 'Alexandre Leonel']
 
+# apenas alguns irmão podem participar dos dois privilégios
 som = ['Natanael Silva', 'Eduardo Ferraz', 'Leonardo Verzi', 'Alexandre Leonel']
 
+# listas vazias para guardar os voluntarios de cada função
+# Alguns serviços estão fixos para eu poder garantir que não se repitam a cada interação
 indicadores = []
 volantes = []
 opsom = ['Leonardo Verzi']
@@ -81,6 +89,7 @@ opsom14 = ['Natanael Silva']
 leitor12 = ['Renato Verzi']
 
 
+# criei uma função que verifica do dia da semana e calcula o numero para poder gerar cada dia refernte ao dia da semna
 def priv():
     dias = ('Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo')
 
@@ -372,9 +381,9 @@ def priv():
         print("Hoje é", dias[hj.weekday()])
         print(f'A data será gerada para o próximo Domingo dia: {domingo1}')
 
-    elif hj.weekday() == 6: # domingo #
-        # quinta1 = date.fromordinal(hj.toordinal() + 4)
-        # ordinario_number = quinta1.toordinal()
+    elif hj.weekday() == 6:  # domingo #
+        quinta1 = date.fromordinal(hj.toordinal() + 4)
+        ordinario_number = quinta1.toordinal()
         domingo2 = date.fromordinal(hj.toordinal())
         ordinario_number = domingo2.toordinal()
         quinta2 = date.fromordinal(ordinario_number + 4)
@@ -415,6 +424,7 @@ def priv():
         print("Hoje é", dias[hj.weekday()])
         print(f'\nA data será gerada para a próxima Quinta-Feira dia: {quinta2}')
 
+    # verifico a lista de voluntarios e adiciono na lista vazia aquele que ainda não trabalhou na reunião anterior
     cont = 0
     for ind1 in voluntarios:
         if ind1 not in opsom and ind1 not in indicadores and cont <= 1:
@@ -439,12 +449,15 @@ def priv():
             volantes2.append(ind2)
             cont += 1
 
+    # imprimo na tela
     print()
-    futuro = quinta2
+    futuro = quinta1
     print(f'{futuro} - Reunião Quinta -- Indicadores: {indicadores} Volantes: {volantes} Som: {opsom}')
-    futuro = domingo2
+    futuro = domingo1
     print(f'{futuro} - Reunião Domingo - Indicadores: {indicadores2} Volantes: {volantes2} Som: {opsom2} Leitor: {leitor1}')
 
+
+    # configuro as celulas do excel e insiro os dados em da sheet
     center_aligned_text = Alignment(horizontal="center")
     bold_font = Font(bold=True)
     sheet["A1"] = str(quinta2)
@@ -467,7 +480,7 @@ def priv():
     sheet["D1"].font = bold_font
     sheet["D2"] = str(opsom)
 
-    sheet["A3"] = str(domingo1)
+    # sheet["A3"] = str(domingo1)
     sheet["B3"] = str(indicadores2)
     sheet["C3"] = str(volantes2)
     sheet["D3"] = str(opsom2)
@@ -548,7 +561,7 @@ def priv():
     futuro = domingo3
     print(f'{futuro} - Reunião Domingo - Indicadores: {indicadores6} Volantes: {volantes6} Som: {opsom6} Leitor: {leitor3}')
 
-    sheet["A6"] = str(quinta3)
+    # sheet["A6"] = str(quinta3)
     sheet["B6"] = str(indicadores5)
     sheet["C6"] = str(volantes5)
     sheet["D6"] = str(opsom5)
